@@ -8,15 +8,16 @@ interface ChatMessageProps {
 export const ChatMessage = ({ message: { text, uid } }: ChatMessageProps) => {
   const activeUser = auth.currentUser;
   const isMine = activeUser?.uid === uid;
-  const messageClass = isMine ? "sent" : "received";
 
   return (
-    <div
-      className={`bg-gray-300 px-2 rounded-lg ${
-        !isMine ? "flex flex-row-reverse" : ""
-      }`}
-    >
-      <p className={`text-gray-900 text-lg`}>{text}</p>
+    <div className={!isMine ? "flex flex-row-reverse" : "flex"}>
+      <div
+        className={`bg-gray-300 px-2 rounded-lg max-w-[50%] ${
+          !isMine ? "flex flex-row-reverse" : ""
+        }`}
+      >
+        <p className={`text-gray-900 text-lg`}>{text}</p>
+      </div>
     </div>
   );
 };

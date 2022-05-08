@@ -27,7 +27,7 @@ function App() {
       <Header />
 
       {user ? (
-        <div>
+        <div className="container mx-auto">
           <div className="py-3 px-2">
             <h1 className="text-lg text-neutral-100">Anonymous chat</h1>
           </div>

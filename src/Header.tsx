@@ -7,7 +7,9 @@ export const Header = () => {
   const [user] = useAuthState(auth);
   return (
     <div className="bg-gray-500 py-6 px-2">
-      <div className="">{user ? <SignOut /> : <SignIn />}</div>
+      <div className="container mx-auto">
+        <div className="">{user ? <SignOut /> : <SignIn />}</div>
+      </div>
     </div>
   );
 };
