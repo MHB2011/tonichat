@@ -44,17 +44,28 @@ export const ChatRoom = () => {
   return (
     <div>
       {messages?.reverse().map((message) => {
-        return <ChatMessage key={message.id} message={message} />;
+        return (
+          <div className="px-2">
+            <ChatMessage key={message.id} message={message} />
+            <div className="h-2"></div>
+          </div>
+        );
       })}
-      <form>
+      <form className="px-2 py-2 flex">
         <input
-          className="flex border border-gray-300 p-1 rounded-md shadow-sm"
+          className="flex border border-gray-300 p-1 rounded-md shadow-sm w-full"
           type={"text"}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
 
-        <button type="submit" onClick={(e) => handleSendMessage(e, text)}>
+        <div className="w-6"></div>
+
+        <button
+          className="bg-emerald-500 p-3 rounded-lg text-gray-900"
+          type="submit"
+          onClick={(e) => handleSendMessage(e, text)}
+        >
           Send
         </button>
       </form>

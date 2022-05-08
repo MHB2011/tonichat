@@ -11,7 +11,12 @@ export const SignIn = () => {
   };
   return (
     <div>
-      <button onClick={handleSignIn}>Sign in with google</button>
+      <button
+        onClick={handleSignIn}
+        className="bg-gray-100 rounded-lg p-2 text-neutral-900 hover:bg-gray-200"
+      >
+        Sign in with google
+      </button>
     </div>
   );
 };

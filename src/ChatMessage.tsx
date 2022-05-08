@@ -11,8 +11,12 @@ export const ChatMessage = ({ message: { text, uid } }: ChatMessageProps) => {
   const messageClass = isMine ? "sent" : "received";
 
   return (
-    <div className={`container-message-${messageClass}`}>
-      <p className={`message-${messageClass}`}>{text}</p>
+    <div
+      className={`bg-gray-300 px-2 rounded-lg ${
+        !isMine ? "flex flex-row-reverse" : ""
+      }`}
+    >
+      <p className={`text-gray-900 text-lg`}>{text}</p>
     </div>
   );
 };

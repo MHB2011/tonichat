@@ -23,10 +23,23 @@ export const firestore = getFirestore(app);
 function App() {
   const [user] = useAuthState(auth);
   return (
-    <>
+    <div className="container bg-gray-600 min-h-screen min-w-full">
       <Header />
-      {user && <ChatRoom />}
-    </>
+
+      {user ? (
+        <div>
+          <div className="py-3 px-2">
+            <h1 className="text-lg text-neutral-100">Anonymous chat</h1>
+          </div>
+
+          <ChatRoom />
+        </div>
+      ) : (
+        <div className="flex items-center justify-center min-h-[20rem]">
+          <h1 className="text-xl text-neutral-100">Sing in to get started</h1>
+        </div>
+      )}
+    </div>
   );
 }
 

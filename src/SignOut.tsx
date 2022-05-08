@@ -7,7 +7,12 @@ export const SignOut = () => {
   return (
     <div>
       {auth.currentUser ? (
-        <button onClick={handleSignOut}>Sign out</button>
+        <button
+          onClick={handleSignOut}
+          className="bg-gray-400 rounded-lg p-2 text-neutral-100 hover:bg-gray-300"
+        >
+          Sign out
+        </button>
       ) : (
         <p>Already logged in</p>
       )}
