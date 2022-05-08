@@ -10,7 +10,7 @@ export const ChatMessage = ({ message: { text, uid } }: ChatMessageProps) => {
   const isMine = activeUser?.uid === uid;
 
   return (
-    <div className={!isMine ? "flex flex-row-reverse" : "flex"}>
+    <div className={isMine ? "flex flex-row-reverse" : "flex"}>
       <div
         className={`bg-gray-300 px-2 rounded-lg max-w-[50%] ${
           !isMine ? "flex flex-row-reverse" : ""
