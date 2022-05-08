@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +26,22 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container-message-sent {
+  background: #282c34;
+}
+
+.message-sent {
+  color: white;
+}
+
+.container-message-received {
+  background: gainsboro;
+}
+
+.message-received {
+  color: blueviolet;
 }
 
 @keyframes App-logo-spin {
